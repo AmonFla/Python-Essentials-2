@@ -1,6 +1,3 @@
-from re import A
-
-
 def encrypt(text, pos):
     encrypted = ''
     for t in text:
