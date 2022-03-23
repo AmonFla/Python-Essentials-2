@@ -1,3 +1,1 @@
-import platform 
-
-print(platform.processor())
+print (chr(96))
