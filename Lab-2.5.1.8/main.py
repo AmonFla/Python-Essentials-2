@@ -6,6 +6,7 @@ def countLetters(letter, text):
     return count 
 
 def areAnagram(text1,text2):
+    if text1 == '' and text2 == '': return False
     for l in text1:
         if countLetters(l,text2) != countLetters(l,text1):
             return False
