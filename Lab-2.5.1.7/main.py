@@ -4,16 +4,20 @@ def cleantext(text):
     return text
 
 def palindrome01(text):
+    if text == '':
+        return "It's not a palindrome"
     for i in range(len(text)//2):
         if text[i] != text[len(text)-1-i]:
             return "It's not a palindrome"
     return "It's a palindrome"
 
 def palindrome02(text):
+    if text == '':
+        return "It's not a palindrome"
     if text == text[len(text)::-1]:
         return "It's a palindrome"
     return "It's not a palindrome"
-    
+     
  
 def main():
     text = input('Write a text: ')
