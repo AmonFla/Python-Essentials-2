@@ -13,7 +13,6 @@ class Point:
         return self.__y
 
     def distance_from_xy(self, x, y):
-        
         x = self.__x - x
         y = self.__y - y
         return math.sqrt(x**2+y**2)
