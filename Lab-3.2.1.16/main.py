@@ -1,5 +1,4 @@
-class QueueError(IndexError):  # Choose base class for the new exception.
-    #  Write code here
+class QueueError(IndexError):
     pass
 
 
@@ -17,13 +16,21 @@ class Queue:
         del self.__queue[-1]
         return val
 
+class SuperQueue(Queue): 
+    # Write new code here. 
+    def __init__(self):
+        super().__init__()
+    
+    def isempty(self):
+        return not bool(len(self.__queue))
 
-que = Queue()
+
+que = SuperQueue()
 que.put(1)
 que.put("dog")
-que.put(False)
-try:
-    for i in range(4):
+que.put(False) 
+for i in range(4): 
+    if not que.isempty():
         print(que.get())
-except:
-    print("Queue error")
+    else:
+        print("Queue empty") 
